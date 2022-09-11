@@ -51,14 +51,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Navegacao() {
+export default function Navegacao({pokemonFilter}) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom:'2em' }}>
       <AppBar position="static" sx={{backgroundColor:"#95041f"}}>
         <Toolbar>
           <Box display="flex" justifyContent="space-between" width="100%">
             <Box component="img" src="/assets/logo.png" height="3em"/>
-          <Search sx={{height:"40px"}}>
+          <Search sx={{height:"40px"}} onChange={(e)=> pokemonFilter(e.target.value)}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
