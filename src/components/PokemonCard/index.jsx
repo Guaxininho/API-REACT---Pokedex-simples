@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Box} from '@mui/system';
+import './cards.css';
 
 export default function PokemonCard({name, image, types}) {
 
@@ -17,7 +18,7 @@ export default function PokemonCard({name, image, types}) {
   }
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className="card" sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         height="300"
@@ -26,10 +27,10 @@ export default function PokemonCard({name, image, types}) {
       />
       <CardContent>
         <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography className='nomeDoPokemon' gutterBottom component="div">
           {name}
         </Typography>
-        <Typography gutterBottom variant="caption" component="div">
+        <Typography className="tipos" gutterBottom component="div">
           {typeHandler()}
         </Typography>
         </Box>

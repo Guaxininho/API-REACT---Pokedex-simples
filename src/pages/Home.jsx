@@ -1,3 +1,4 @@
+import './reset.css';
 import {Grid} from '@mui/material';
 import {Box, Container} from '@mui/system';
 import axios from 'axios';
@@ -5,6 +6,7 @@ import React, { useEffect, useState} from 'react';
 import Navegacao from '../components/Navbar';
 import PokemonCard from '../components/PokemonCard';
 import Skeletons from '../components/Skeletons';
+
 
 
 export const Home = () => {
